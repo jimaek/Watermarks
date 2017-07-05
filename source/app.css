@@ -1,0 +1,15 @@
+body[data-cf-watermark-mode="live"] img[data-watermark-parse-state="parsing"] {
+  visibility: hidden !important;
+}
+
+body[data-cf-watermark-mode="preview"] img[data-watermark-parse-state="pending"] {
+  transition: filter 200ms linear;
+  filter: blur(4px);
+  opacity: 0.7;
+}
+
+body[data-cf-watermark-mode="preview"] img[data-watermark-parse-state="parsing"] {
+  transition: filter 800ms linear;
+  filter: blur(2px);
+  opacity: 0.85;
+}

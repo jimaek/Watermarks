@@ -1,0 +1,40 @@
+{
+  "name": "cloudflare-watermarks",
+  "version": "0.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "lint": "standard --fix ./source/**/*.js || true"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CloudflareApps/Watermarks.git"
+  },
+  "contributors": [
+    {
+      "name": "Cloudflare Labs",
+      "email": "app-developer-help@cloudflare.com"
+    },
+    {
+      "name": "Dmitriy Akulov",
+      "email": "dakulovgr@gmail.com"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CloudflareApps/Watermarks/issues"
+  },
+  "homepage": "https://github.com/CloudflareApps/Watermarks#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "standard": "^9.0.2"
+  },
+  "standard": {
+    "globals": [
+      "INSTALL",
+      "INSTALL_OPTIONS",
+      "INSTALL_SCOPE",
+      "INSTALL_ID"
+    ]
+  }
+}

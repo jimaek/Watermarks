@@ -1,0 +1,128 @@
+{
+  "resources": {
+    "head": [
+      {
+        "type": "style",
+        "src": "./source/app.css"
+      },
+      {
+        "type": "script",
+        "src": "./vendor/watermark.js"
+      },
+      {
+        "type": "script",
+        "src": "./source/app.js"
+      }
+    ]
+  },
+  "preview": {
+    "handlers": [
+      {
+        "options": ["text", "textSize", "textColor", "position", "opacity"],
+        "execute": "INSTALL_SCOPE.setOptions(INSTALL_OPTIONS)"
+      }
+    ]
+  },
+  "options": {
+    "properties": {
+      "text": {
+        "order": 20,
+        "default": "Sample text",
+        "title": "Watermark text",
+        "type": "string"
+      },
+      "textSize": {
+        "order": 21,
+        "default": "48",
+        "title": "Text size",
+        "type": "string",
+        "enum": [
+          "24",
+          "48",
+          "96"
+        ],
+        "enumNames": {
+          "24": "Small",
+          "48": "Medium",
+          "96": "Large"
+        }
+      },
+      "textColor": {
+        "order": 22,
+        "default": "#ffffff",
+        "format": "color",
+        "title": "Text color",
+        "type": "string"
+      },
+      "position": {
+        "order": 30,
+        "default": "center",
+        "title": "Watermark position",
+        "type": "string",
+        "enum": [
+          "upperLeft",
+          "upperRight",
+          "lowerLeft",
+          "lowerRight",
+          "center"
+        ],
+        "enumNames": {
+          "upperLeft": "Upper left corner",
+          "upperRight": "Upper right corner",
+          "lowerLeft": "Lower left corner",
+          "lowerRight": "Lower right corner",
+          "center": "Center"
+        }
+      },
+      "opacity": {
+        "order": 31,
+        "default": 50,
+        "title": "Watermark opacity",
+        "type": "number",
+        "format": "slider",
+        "minimum": 0,
+        "maximum": 100,
+        "step": 1
+      },
+      "showAdvanced": {
+        "order": 32,
+        "type": "boolean",
+        "title": "Show advanced options",
+        "default": false
+      },
+      "advanced": {
+        "showIf": {
+          "showAdvanced": true
+        },
+        "order": 33,
+        "type": "object",
+        "title": "Advanced options",
+        "properties": {
+          "location": {
+            "order": 0,
+            "title": "Location",
+            "type": "string",
+            "format": "selector",
+            "default": "body"
+          },
+          "minWidth": {
+            "order": 1,
+            "default": 300,
+            "title": "Minimum width",
+            "description": "Only watermark images with a minimum pixel width of...",
+            "type": "number",
+            "minimum": 0
+          },
+          "minHeight": {
+            "order": 2,
+            "default": 300,
+            "title": "Minimum height",
+            "description": "Only watermark images with a minimum pixel height of...",
+            "type": "number",
+            "minimum": 0
+          }
+        }
+      }
+    }
+  }
+}
